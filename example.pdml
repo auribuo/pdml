@@ -1,0 +1,22 @@
+page <https://game8.co/games/Honkai-Star-Rail/archives/410296> = "blog"
+{
+    $version_headings = h2.a-header--2*;
+    {
+        $fist_elem = ?*1;
+    }
+    $codes_list = ul.a-list*;
+}
+
+page <https://honkai-star-rail.fandom.com/wiki/Version> = "wiki"
+{
+    table;
+    {
+        tr*;
+        {
+            td;
+            $version_elem = td;
+            td;
+            $version_date_elem = td;
+        }
+    }
+}
