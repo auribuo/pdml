@@ -9,7 +9,7 @@ page <https://game8.co/games/Honkai-Star-Rail/archives/410296> = "blog"
 
 page <https://honkai-star-rail.fandom.com/wiki/Version> = "wiki"
 {
-    table;
+    $tbl = table;
     {
         tr*;
         {

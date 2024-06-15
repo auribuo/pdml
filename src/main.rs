@@ -1,5 +1,18 @@
-fn main() {
-    let reader = pdml_lib::reader::CharReader::from_file("example.pdml".to_string()).unwrap();
-    let mut lexer = pdml_lib::lexer::Lexer::new(reader);
-    lexer.tokenize().unwrap().iter().for_each(|t|println!("{:?}", t))
+use pdml_lib::{parser::Parser, scrape::{ParserExt, ScrapeBindable}};
+
+#[tokio::main]
+async fn main() {
+    let mut parser = Parser::for_file("example.pdml".to_string());
+    let _ = parser.scrape::<Res>().await.unwrap();
+}
+
+struct Res {
+
+}
+
+impl ScrapeBindable for Res {
+    fn bind(page: &pdml_lib::scrape::ScrapedPage) -> Self {
+        dbg!(page);
+        Self{}
+    }
 }
