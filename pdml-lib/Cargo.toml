@@ -4,12 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [features]
-default = ["scrape"]
 scrape = ["dep:reqwest", "dep:async-trait"]
 
 [dependencies]
 reqwest = { version = "0.11.23", optional = true }
 thiserror = "1.0.56"
 pdml-macros = { path = "../pdml-macros" }
-soup = { path = "../soup" }
 async-trait = { version = "0.1.77", optional = true }

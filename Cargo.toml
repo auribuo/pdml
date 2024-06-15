@@ -1,4 +1,4 @@
-workspace = { members = ["pdml-lib", "pdml-macros", "soup"] }
+workspace = { members = ["pdml-lib", "pdml-macros"] }
 
 [package]
 name = "pdml"

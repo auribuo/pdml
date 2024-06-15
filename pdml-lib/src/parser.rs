@@ -2,6 +2,7 @@ use crate::lexer;
 use crate::lexer::{Lexer, LexerError, LiteralType, ParenType, Token, TokenType};
 use crate::parser::Error::{UnexpectedTokenError, UnexpectedTokenValidManyError};
 use crate::reader::{CharReader, ReaderError};
+#[cfg(feature = "scrape")]
 use crate::Error::ScraperError;
 use std::string::ToString;
 use thiserror::Error;
